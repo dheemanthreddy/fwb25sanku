@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let pens = [
+                    {
+                        "type": "Desert",
+                        "flavour": "vanila",
+                        "price": "20"                        
+                    },
+                    {
+                        "type": "low fat",
+                        "flavour": "choco nuts",
+                        "price": "100"
+                    },
+                    {
+                        "type": "softicecream",
+                        "flavour": "strawberry",
+                        "price": "250"
+                    },                   
+                ]
+            each pen in pens 
+                div(class="col-sm-2") #{pen.type}
+                div(class="col-sm-2") #{pen.color}
+                div(class="col-sm-2") #{pen.price}
+
+
