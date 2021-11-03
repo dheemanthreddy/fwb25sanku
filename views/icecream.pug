@@ -6,7 +6,7 @@ block content
   div(class="container-fluid")
         div(class="row")
             -
-                let pens = [
+                let icecream = [
                     {
                         "type": "Desert",
                         "flavour": "vanila",
@@ -23,9 +23,9 @@ block content
                         "price": "250"
                     },                   
                 ]
-            each pen in pens 
-                div(class="col-sm-2") #{pen.type}
-                div(class="col-sm-2") #{pen.color}
-                div(class="col-sm-2") #{pen.price}
+            each icecreams in icecream
+                div(class="col-sm-2") #{icecreams.type}
+                div(class="col-sm-2") #{icecreams.flavour}
+                div(class="col-sm-2") #{icecreams.price}
 
 
