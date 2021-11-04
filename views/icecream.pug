@@ -2,30 +2,13 @@ extends layout
 
 block content
   h1= title
-
-  div(class="container-fluid")
-        div(class="row")
-            -
-                let icecream = [
-                    {
-                        "type": "Desert",
-                        "flavour": "vanila",
-                        "price": "20"                        
-                    },
-                    {
-                        "type": "low fat",
-                        "flavour": "choco nuts",
-                        "price": "100"
-                    },
-                    {
-                        "type": "softicecream",
-                        "flavour": "strawberry",
-                        "price": "250"
-                    },                   
-                ]
-            each icecreams in icecream
-                div(class="col-sm-2") #{icecreams.type}
-                div(class="col-sm-2") #{icecreams.flavour}
-                div(class="col-sm-2") #{icecreams.price}
-
-
+  - const icecream   = ['icecream_type','quantity','cost']
+  - let results;
+  script.
+    function buy(x){
+      alert('Purchased Item: ' + x)
+   } 
+  div(class='container-fluid')
+    div(class='row')
+      each results, index in icecrem  
+        div(class='col-sm-2' onclick='buy('+index+')') #{results}
