@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var icecream = require('./models/icecream')
 
 const connectionString =  
 process.env.MONGO_CON 
@@ -16,7 +17,6 @@ var usersRouter = require('./routes/users');
 var icecreamRouter = require('./routes/icecream');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
-var icecreamRouter = require('./routes/icecream'); 
 var resourceRouter = require('./routes/resource'); 
 
 
