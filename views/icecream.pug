@@ -2,13 +2,12 @@ extends layout
 
 block content
   h1= title
-  - const icecream   = ['icecream_type','quantity','cost']
-  - let results;
+  - let icecream = results;
   script.
     function buy(x){
       alert('Purchased Item: ' + x)
    } 
   div(class='container-fluid')
     div(class='row')
-      each results, index in icecream 
-        div(class='col-sm-2' onclick='buy('+index+')') #{results}
+      each ice, index in icecream 
+        div(class='col-sm-2' onclick='buy('+index+')') #{ice.icecream_type} #{ice.quantity} #{ice.cost}

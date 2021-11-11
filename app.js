@@ -45,9 +45,9 @@ db.once("open", function(){
 async function recreateDB(){ 
   // Delete everything 
   await icecream.deleteMany(); 
-  let instance1 = new icecream({icecream_type:"Cone icecream", quantity: 3,Cost:20});
-  let instance2 = new icecream({icecream_type:"Cup icecream", quantity: 4,Cost:100});
-  let instance3 = new icecream({icecream_type:"Round icecream", quantity: 5,Cost:250});
+  let instance1 = new icecream({icecream_type:"Cone icecream", quantity: 3,cost:20});
+  let instance2 = new icecream({icecream_type:"Cup icecream", quantity: 4,cost:100});
+  let instance3 = new icecream({icecream_type:"Round icecream", quantity: 5,cost:250});
   instance1.save( function(err,doc) {
   if(err) return console.error(err);
   console.log("First object saved")
