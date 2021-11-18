@@ -1,9 +1,9 @@
-extends layout 
- 
-block content 
-  h1= title 
- 
-  - let icecreamid = toShow._id 
+block content
+  h1= title
+   if (toShow == null)
+    h2 No instance to Update
+   else
+ - let icecreamid = toShow._id 
   - let icecream_type = toShow.icecream_type 
   - let cost = toShow.cost 
   - let quantity = toShow.quantity
