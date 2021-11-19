@@ -8,6 +8,13 @@ block content
       alert('Purchased Item: ' + x)
    } 
   div(class='container-fluid')
-    div(class='row')
-      each ice, index in icecream 
+      div(class="row m-1") 
+      each ice, index in icecream
+        - let destination = `dispatch(\"/icecream/update?id=${ice._id}\")`  
         div(class='col-sm-2' onclick='buy('+index+')') #{ice.icecream_type} #{ice.quantity} #{ice.cost}
+         button.btn( class="btn-primary ml-1", onclick= destination) Update 
+
+  script. 
+    function dispatch(path){ 
+      window.location.href=path 
+    } 
